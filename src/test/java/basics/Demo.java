@@ -121,6 +121,14 @@ public class Demo {
                 .findFirst()
                 .get();
         System.out.println(res);
+
+        //removing duplicates from array
+        int[] arr = new int[]{1,2,2,3,4,5,5,3,55,6};
+        System.out.println(Arrays.toString(arr));
+        int[] res_arr=Arrays.stream(arr)
+                .distinct()
+                .toArray();
+        System.out.println(Arrays.toString(res_arr));
     }
     @DataProvider
     public Object[][] nameProvider(){
