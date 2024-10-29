@@ -26,7 +26,7 @@ public class randomTest {
         browserOptions.setBrowserVersion("latest");
         Map<String, Object> sauceOptions = new HashMap<>();
         sauceOptions.put("username", "oauth-ketanpal2002-6d497");
-        sauceOptions.put("accessKey", "40d0111b-f5a4-4fce-b9fc-a5167f679c2d");
+        sauceOptions.put("accessKey", "");
         sauceOptions.put("build", "selenium-build-L0P08");
         sauceOptions.put("name", "<your test name>");
         browserOptions.setCapability("sauce:options", sauceOptions);
