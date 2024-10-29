@@ -109,7 +109,18 @@ public class Demo {
                 .map(f->f[0])
                 .forEach(System.out::println);
 
-
+        //getting first non repeating char in string
+        String str2 = "madam";
+        Character res = str2.chars()
+                .mapToObj(c->(char) c)
+                .collect(Collectors.groupingBy(c -> c, LinkedHashMap::new, Collectors.counting()))
+                .entrySet()
+                .stream()
+                .filter(entry -> entry.getValue() == 1)
+                .map(Map.Entry::getKey)
+                .findFirst()
+                .get();
+        System.out.println(res);
     }
     @DataProvider
     public Object[][] nameProvider(){
